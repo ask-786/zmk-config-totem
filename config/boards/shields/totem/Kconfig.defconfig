@@ -24,11 +24,11 @@ config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
 config BT_MAX_CONN
     default 6
 
-endif
-
 # Set this to the same number as BT_MAX_CONN
 config BT_MAX_PAIRED
     default 6
+
+endif
 
 if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT || SHIELD_TOTEM_DONGLE
 
