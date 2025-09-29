@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include "totem_vbatt.dtsi"
 #include "totem.dtsi"
 
 &kscan0 {

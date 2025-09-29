@@ -1,0 +1,13 @@
+/*
+ * Battery sense configuration for the Totem shield
+ */
+
+/ {
+    vbatt: vbatt {
+        compatible = "voltage-divider";
+        label = "BATTERY";
+        io-channels = <&adc 2>; // ADC_A0 is P0.02 on the XIAO nRF52840
+        output-ohms = <840000>;
+        full-ohms = <2000000>;
+    };
+};
