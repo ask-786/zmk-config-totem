@@ -3,6 +3,11 @@
  */
 
 / {
+    /* This chosen node tells ZMK which device to use for battery readings. */
+    chosen {
+        zmk,battery = &vbatt;
+    };
+
     vbatt: vbatt {
         compatible = "voltage-divider";
         label = "BATTERY";
