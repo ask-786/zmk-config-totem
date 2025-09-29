@@ -9,9 +9,9 @@
     };
 
     vbatt: vbatt {
-        compatible = "voltage-divider";
+        compatible = "battery-voltage-divider";
         label = "BATTERY";
-        io-channels = <&adc 2>; // ADC_A0 is P0.02 on the XIAO nRF52840
+        io-channels = <&adc 2>;
         output-ohms = <840000>;
         full-ohms = <2000000>;
     };
