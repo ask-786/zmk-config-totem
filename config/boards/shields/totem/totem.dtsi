@@ -10,6 +10,7 @@
     chosen {
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
+        zmk,battery-reporting = &battery_reporting;
     };
 
     default_transform: keymap_transform_0 {
@@ -40,5 +41,21 @@
             , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
+    };
+
+    battery_reporting: battery_reporting {
+        compatible = "zmk,battery-reporting";
+
+        dongle {
+            hidden;
+        };
+        left {
+            display-name = "Left";
+            cpf = <0x010D>;
+        };
+        right {
+            display-name = "Right";
+            cpf = <0x010E>;
+        };
     };
 };
