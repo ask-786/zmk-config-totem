@@ -111,10 +111,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                &kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6      &kp N7                    &kp N8                  &kp N9                   &kp N0
-                &kp LSHFT     &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &kp LBKT        &kp LEFT_ARROW    &mt RIGHT_ALT DOWN_ARROW  &mt RIGHT_WIN UP_ARROW  &mt RIGHT_CONTROL RIGHT  &kp KP_MINUS
-&kp LEFT_SHIFT  &kp DEL       &kp PG_UP         &kp CAPS      &kp PG_DN     &kp LPAR        &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp MINUS               &kp EQUAL                &kp KP_MULTIPLY  &kp RIGHT_SHIFT
-                                                &trans        &trans        &trans          &mo ADJ           &kp KP_N0                 &trans
+                &kp NUMBER_1  &kp NUMBER_2      &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5        &kp NUMBER_6      &kp N7                    &kp N8                  &kp N9                   &kp N0
+                &kp LSHFT     &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &kp GRAVE           &kp LEFT_ARROW    &mt RIGHT_ALT DOWN_ARROW  &mt RIGHT_WIN UP_ARROW  &mt RIGHT_CONTROL RIGHT  &kp KP_MINUS
+&kp LEFT_SHIFT  &kp DEL       &kp PG_UP         &kp CAPS      &kp PG_DN     &kp SINGLE_QUOTE    &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp MINUS               &kp EQUAL                &kp KP_MULTIPLY  &kp RIGHT_SHIFT
+                                                &trans        &trans        &trans              &mo ADJ           &kp KP_N0                 &trans
             >;
         };
 
