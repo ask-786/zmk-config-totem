@@ -5,13 +5,13 @@ manifest:
     - name: battery_reporting
       url-base: https://github.com/ask-786
   projects:
-    - name: zmk
-      remote: zmkfirmware
-      revision: main
-      import: app/west.yml
     # - name: zmk
-    #   remote: battery_reporting
+    #   remote: zmkfirmware
     #   revision: main
     #   import: app/west.yml
+    - name: zmk
+      remote: battery_reporting
+      revision: main
+      import: app/west.yml
   self:
     path: config
