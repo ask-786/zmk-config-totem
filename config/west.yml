@@ -2,21 +2,11 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: battery_reporting
+    - name: personal
       url-base: https://github.com/ask-786
-    - name: xythobuz
-      url-base: https://github.com/xythobuz
   projects:
-    # - name: zmk
-    #   remote: zmkfirmware
-    #   revision: main
-    #   import: app/west.yml
-    # - name: zmk
-    #   remote: battery_reporting
-    #   revision: feat/battery-reporting
-    #   import: app/west.yml
     - name: zmk
-      remote: xythobuz
+      remote: personal
       revision: feat/individual-hid-battery-reporting
       import: app/west.yml
   self:
