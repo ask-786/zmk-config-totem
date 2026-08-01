@@ -6,6 +6,13 @@
 
 #include "totem.dtsi"
 
+/ {
+    charge_status {
+        compatible = "zmk,battery-charge-status";
+        charging-gpios = <&gpio0 17 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
+};
+
 &default_transform {
     col-offset = <5>;
 };

@@ -4,10 +4,12 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: personal
       url-base: https://github.com/ask-786
+    - name: zampierilucas
+      url-base: https://github.com/zampierilucas
   projects:
     - name: zmk
-      remote: personal
-      revision: feat/individual-hid-battery-reporting
+      remote: zampierilucas
+      revision: feat/individual-hid-battery-reporting-v2
       import: app/west.yml
   self:
     path: config
