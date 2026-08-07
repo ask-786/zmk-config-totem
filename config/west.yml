@@ -8,8 +8,8 @@ manifest:
       url-base: https://github.com/zampierilucas
   projects:
     - name: zmk
-      remote: zampierilucas
-      revision: feat/individual-hid-battery-reporting-v2
+      remote: personal
+      revision: fix/no-usb-wakeup-on-battery-report
       import: app/west.yml
   self:
     path: config
