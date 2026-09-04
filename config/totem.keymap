@@ -127,8 +127,8 @@
 
             bindings = <
             &trans  &bt BT_PRV  &trans        &bt BT_NXT  &trans    &kp DELETE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp PRINTSCREEN  &trans
-            &trans  &mo 4       &kp LEFT_WIN  &mo 5       &trans    &trans      &kp K_VOLUME_DOWN     &kp K_MUTE            &kp K_VOLUME_UP  &trans
-&bt BT_CLR  &trans  &trans      &trans        &trans      &trans    &trans      &kp K_PREV            &kp K_PLAY_PAUSE      &kp K_NEXT       &trans  &trans
+            &trans  &mo 4       &kp LEFT_WIN  &mo 5       &trans    &kp HOME    &kp K_VOLUME_DOWN     &kp K_MUTE            &kp K_VOLUME_UP  &trans
+&bt BT_CLR  &trans  &trans      &trans        &trans      &trans    &kp END     &kp K_PREV            &kp K_PLAY_PAUSE      &kp K_NEXT       &trans  &trans
                                 &trans        &trans      &trans    &mo 3       &trans                &trans
             >;
         };
