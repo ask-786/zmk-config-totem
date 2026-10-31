@@ -24,6 +24,8 @@
 #define ADJ  3
 #define TVP1 4
 #define TVP2 5
+#define GAME 6
+#define GFN  7
 
 &mt {
     quick-tap-ms = <100>;
@@ -128,7 +130,7 @@
             bindings = <
             &trans  &bt BT_PRV  &trans        &bt BT_NXT  &trans    &kp DELETE  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp PRINTSCREEN  &trans
             &trans  &mo 4       &kp LEFT_WIN  &mo 5       &trans    &kp HOME    &kp K_VOLUME_DOWN     &kp K_MUTE            &kp K_VOLUME_UP  &trans
-&bt BT_CLR  &trans  &trans      &trans        &trans      &trans    &kp END     &kp K_PREV            &kp K_PLAY_PAUSE      &kp K_NEXT       &trans  &trans
+&bt BT_CLR  &trans  &trans      &trans        &trans      &trans    &kp END     &kp K_PREV            &kp K_PLAY_PAUSE      &kp K_NEXT       &trans  &tog GAME
                                 &trans        &trans      &trans    &mo 3       &trans                &trans
             >;
         };
@@ -193,6 +195,39 @@
         &trans  &trans  &kp LEFT_WIN  &trans  &trans    &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans
 &trans  &trans  &trans  &trans        &trans  &trans    &trans          &mkp MB4        &mkp MB5      &trans           &trans  &trans
                         &trans        &trans  &trans    &trans          &trans          &trans
+            >;
+        };
+
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+        // Plain keys for games: no home-row mods on the left hand, so holding
+        // A/W/D doesn't fire Ctrl/Win/Alt. Movement sits on the home row
+        // (A ring, W middle, S middle-bottom, D index). Every left-hand key is
+        // explicit so nothing falls through to BASE's mod-taps. Toggled on from
+        // SYM (bottom-right outer key) and off with the same key here.
+        game_layer {
+            label = "GAME";
+
+            bindings = <
+            &kp TAB    &kp Q  &kp E  &kp R  &kp G      &trans  &trans  &trans  &trans  &trans
+            &kp LSHFT  &kp A  &kp W  &kp D  &kp F      &trans  &trans  &trans  &trans  &trans
+&kp ESC     &kp Z      &kp X  &kp S  &kp C  &kp V      &trans  &trans  &trans  &trans  &trans  &tog GAME
+                       &kp LCTRL  &kp SPACE  &mo GFN      &trans  &trans  &trans
+            >;
+        };
+
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+        // Held from GAME's innermost left thumb: numbers above the movement
+        // fingers, occasional game keys below, F-keys on the right.
+        game_fn_layer {
+            label = "GAME FN";
+
+            bindings = <
+            &kp N1    &kp N2  &kp N3  &kp N4  &kp N5      &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
+            &kp N6    &kp N7  &kp N8  &kp N9  &kp N0      &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&trans      &kp LALT  &kp T   &kp B   &kp M   &kp I       &kp F11  &kp F12  &trans  &trans  &trans  &trans
+                              &trans  &trans  &trans      &trans   &trans   &trans
             >;
         };
     };
